@@ -24,5 +24,7 @@ jobs:
 
     - name: Build and push Docker image
       run: |
+        echo $ACR_PASSWORD
+        echo secrets
         docker build -t registry.cn-heyuan.aliyuncs.com/chang_kong/hello-github:v1.0.0 .
         docker push registry.cn-heyuan.aliyuncs.com/chang_kong/hello-github:v1.0.0
